@@ -1,0 +1,30 @@
+@use '../variables'
+@import '../_breakpoints'
+
+.section__task-container
+    display: grid
+    align-items: flex-start
+    max-height: 100vh
+    gap: 0.5em
+    grid-template-columns: repeat(auto-fit, minmax(360px, 420px))
+    justify-content: center
+ 
+    .section__task-no-search-result-container
+        display: flex
+        justify-content: center
+    
+@media (min-width: $screen-sm-min)
+    .section__task-container
+        align-self: center
+        justify-self: center
+        overflow-y: auto
+        max-height: 365px
+        width: 100%
+        padding: 0em
+
+@media (min-width: $screen-md-min)
+    .section__task-container
+        align-self: center
+        justify-self: center
+        overflow-y: visible
+        max-height: 365px
