@@ -1,0 +1,89 @@
+@use '../variables'
+
+.section__modal-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    overflow-y: hidden
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 1
+
+
+    .modal-overlay__wrapper
+        max-width: 500px
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin: 2rem auto
+
+    .wrapper__content
+        position: relative
+        background-color: #fff
+        border: 1px solid rgba(0, 0, 0, 0.3)
+        border-radius: 0.5em
+
+        .content__header
+            padding: 0.4em
+            text-align: center
+            font-size: 2em
+            border-bottom: 1px solid variables.$black-color
+            display: flex
+            flex-direction: column
+            position: relative
+            color: variables.$black-color
+
+            .header__close-button
+                background-color: variables.$black-color
+                color: variables.$white-smoke-color
+                position: absolute
+                top: 0
+                right: 0
+                .close-button__icon
+                    font-size: 1.5em
+            h3
+                font-family: variables.$font-modal
+                font-weight: bold
+
+    .content__body
+        padding: 15px 40px 30px
+
+        .body__form
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 1em
+
+            .form__container-input
+                position: relative
+                border: 1.5px solid variables.$black-color
+                border-radius: 0.5em
+                
+                .container-input__icon
+                    position: absolute
+                    top: 35%
+                    left: 16px
+
+                .container-input__input
+                    padding: 1em
+                    width: 100% 
+                    outline: none
+                    font-size: 1rem
+                    border-radius: 0.5em
+
+                .input__task
+                    padding: 1em 1em 1em 3em
+            .container-input__submit
+                background-color: variables.$black-color
+                color: variables.$white-smoke-color
+                font-size: 1em
+                font-weight: bold
+                text-transform: capitalize
+
+    .content__footer
+        display: flex
+        justify-content: center
+        padding: 15px 40px 30px
