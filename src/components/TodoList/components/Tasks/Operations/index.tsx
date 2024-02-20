@@ -13,7 +13,7 @@ export const DeleteTask = (task: Task): JSX.Element => {
     function handleDelete() {
         removeTask(task);
         toast({
-            title: '✔ Tarefa excluída com sucesso',
+            title: '✓ Tarefa excluída com sucesso',
             variant: 'success',
         });
     }
@@ -32,7 +32,7 @@ export const CheckTask = (task: Task): JSX.Element => {
     function handleComplete() {
         completeTask(task);
         toast({
-            title: '✔ Tarefa concluída com sucesso',
+            title: '✓ Tarefa concluída com sucesso',
             variant: 'success',
         });
     }

@@ -65,7 +65,7 @@ export default function Index({ title, description, openModal, setOpenModal, tas
     function sendToastCreateOrUpdate(operation: Operation, { name, tag, date }: TaskSchemaType): void {
         const operationText = operation === 'create' ? 'criado' : 'atualizado';
         toast({
-            title: `✔ Tarefa ${operationText} com sucesso`,
+            title: `✓ Tarefa ${operationText} com sucesso`,
             description: (
                 <div className="flex flex-col gap-2 text-[1.2em] font-bold">
                     <div className="flex items-center gap-2">
