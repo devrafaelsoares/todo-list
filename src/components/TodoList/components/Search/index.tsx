@@ -2,7 +2,6 @@ import { FaSearch } from 'react-icons/fa';
 import { ChangeEvent, useContext } from 'react';
 import { SearchContainer, SearchIconWrapper, StyledInputBase } from './style';
 import { TaskContext } from '@/contexts/TaskContext';
-import '@/assets/styles/components/search.sass';
 
 export default function Search(): JSX.Element {
     const { setSearchTasks } = useContext(TaskContext);
@@ -13,7 +12,7 @@ export default function Search(): JSX.Element {
     };
 
     return (
-        <SearchContainer className="header__seach">
+        <SearchContainer className="header__search">
             <SearchIconWrapper>
                 <FaSearch />
             </SearchIconWrapper>
