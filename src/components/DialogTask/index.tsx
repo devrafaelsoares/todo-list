@@ -41,7 +41,7 @@ const TaskSchema = z.object({
         .string()
         .min(1, 'Campo obrigatório')
         .transform(word => toCapitalize(word)),
-    date: z.date({ required_error: 'Campo obrigatório' }),
+    date: z.coerce.date({ required_error: 'Campo obrigatório' }),
 });
 
 const INITIAL_TASK_VALUE = { id: '', name: '', date: undefined, tag: '' };
